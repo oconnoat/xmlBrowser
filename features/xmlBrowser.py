@@ -8,7 +8,7 @@ import os
 import sys
 from glob import glob
 from lxml import etree
-
+# from itertools import imap
 
 __author__ = "Alexander O'Connor <oconnoat@gmail.com>"
 __copyright__ = "Copyright 2014, Alexander O'Connor <oconnoat@gmail.com>"
@@ -33,12 +33,15 @@ def get_tree(filename):
     except etree.XMLSyntaxError, e:
         return None
 
+@profile
 def load_xml_dir(path):
     """docstring for load_xml_dir"""
     dir_glob = glob(os.path.join(path,'*.xml'))
+    #would love to find a more efficient way to do this :)
     dir_trees = filter(None, map(get_tree, dir_glob))
+#    dir_trees = [tree for tree in imap(get_tree, dir_glob)  if tree is not None]
     print "%d trees" % len(dir_trees)
     return dir_trees
 
 if __name__ == '__main__':
-    pass
+   load_xml_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/iish')
