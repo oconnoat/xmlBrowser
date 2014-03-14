@@ -28,20 +28,18 @@ def open_dir(path):
 
 
 def get_tree(filename):
+    """parse an xml file and if it's valid return it, otherwise return none"""
     try:
         return (filename, etree.parse(filename))
     except etree.XMLSyntaxError, e:
         return None
 
-@profile
-def load_xml_dir(path):
-    """docstring for load_xml_dir"""
-    dir_glob = glob(os.path.join(path,'*.xml'))
+def load_xml_dir(dir_glob):
+    """load the xml files and parse them, return a dictionary of files and their trees"""
     #would love to find a more efficient way to do this :)
     dir_trees = filter(None, map(get_tree, dir_glob))
 #    dir_trees = [tree for tree in imap(get_tree, dir_glob)  if tree is not None]
-    print "%d trees" % len(dir_trees)
-    return dir_trees
+    return dict(dir_trees)
 
 if __name__ == '__main__':
    load_xml_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/iish')

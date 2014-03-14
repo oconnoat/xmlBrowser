@@ -27,7 +27,7 @@ def open_and_count(step):
 
 @step(u'When I open it and count the valid xml files')
 def when_i_open_it_and_count_the_valid_xml_files(step):
-    world.number = len(xmlBrowser.load_xml_dir(world.path))
+    world.number = len(xmlBrowser.load_xml_dir(xmlBrowser.open_dir(world.path)))
 
 @step('I see the number (\d+)')
 def check_number(step, expected):
