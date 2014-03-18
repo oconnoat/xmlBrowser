@@ -31,14 +31,14 @@ def when_i_open_it_and_count_the_valid_xml_files(step):
 
 @step(u'When I open it and get the list of namespaces from all the trees')
 def when_i_open_it_and_get_the_list_of_namespaces_from_all_the_trees(step):
-    world.text = 'test'
+    world.text = xmlBrowser.get_namespace_list(xmlBrowser.load_xml_dir(xmlBrowser.open_dir(world.path)))
 
 @step('I see the number (\d+)')
 def check_number(step, expected):
     expected = int(expected)
     assert expected == world.number, "got %d" % world.number
 
-@step('I see the text \'([^\']*)\'')
+@step('I see the text (.*)')
 def check_text(step, expected):
-    expected = unicode(expected)
-    assert expected == world.text, u'got %s' % world.text
+    expected = str(expected)
+    assert expected == world.text, '\nexpected\t%s\ngot\t%s' % (expected, world.text)

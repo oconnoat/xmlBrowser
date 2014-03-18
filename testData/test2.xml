@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
-<xml>
-    <node value="1" id="1">One</node>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+    <node xmlns="http://example.com" value="1" id="1">One</node>
     <node value="2" id="2">Two</node>
     <node value="2" id="3">Three</node>
     <node value="3" id="4">Four</node>

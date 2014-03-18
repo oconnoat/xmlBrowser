@@ -42,9 +42,10 @@ def load_xml_dir(dir_glob):
     return dict(dir_trees)
 
 def get_namespace_list(dir_trees):
-    """For each tree, get the namespace statements, if any"""
-    return 'test'
-
+    """For each tree, get the namespace statements for the root node, if any"""
+    nsURIs = set([ns for url in dir_trees for ns in dir_trees[url].getroot().nsmap.values()])
+    return str(nsURIs)
 
 if __name__ == '__main__':
-   load_xml_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/iish')
+  get_namespace_list(load_xml_dir(open_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/testData')))
+

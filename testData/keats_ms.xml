@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?oxygen RNGSchema="schemas/exercise.rnc" type="compact"?>
+<?oxygen SCHSchema="schemas/exercise.isosch"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Draft of Keats' "I Stood Tip-Toe Upon a Little Hill"</title>
+        <author>
+          <persName>
+            <!-- author's name here -->
+          </persName>
+        </author>
+      </titleStmt>
+      <publicationStmt>
+        <publisher>Northeastern University Women Writers Project</publisher>
+        <availability>
+          <ab>
+            <!-- copyright or copyleft information here -->
+          </ab>
+        </availability>
+      </publicationStmt>
+      <sourceDesc>
+        <msDesc>
+          <msIdentifier>
+            <repository>http://englishhistory.net/keats/manuscripts.html</repository>
+          </msIdentifier>
+        </msDesc>
+        <bibl>
+          <!-- source information here; better yet, use a <biblStruct> instead -->
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <front/>
+    <body>
+      <figure>
+        <figDesc>crosshatch doodles appear at top of page and along left-hand
+                    margin</figDesc>
+      </figure>
+      <lg>
+        <l>
+          <persName rend="underline right-align">John Keates</persName>
+        </l>
+      </lg>
+      <lg>
+        <l><damage agent="rubbing" degree="low">S</damage>ometimes Gold. finches
+                    one by one will drop</l>
+        <l><damage agent="rubbing" degree="low">F</damage>rom low hung Branch
+                    little space they stop</l>
+        <l>
+          <del rend="strikethrough">They sip and</del>
+        </l>
+        <l>But sip and twitter and their feathers <sic>sleak</sic><corr cert="high">sleek</corr></l>
+        <l>Then off they go as in a wonton freak</l>
+        <l>
+          <del rend="strikethrough">And as they come and go but small their
+                        wings</del>
+        </l>
+        <l>
+          <del rend="strikethrough">So lovely for their yellow
+                    flutterings</del>
+        </l>
+        <l>Or perhaps to show the Beauty of their wings</l>
+        <l>Pausing when their yellow flutterings</l>
+        <l>Were I in such a place I sure would pray</l>
+        <l>That nought less sweet might call my thoughts away</l>
+        <l>Than the soft Rustling of a Maiden's gown</l>
+        <l>Sweeping away the Dandelion's down</l>
+        <l>
+          <del rend="strikethrough">Than her light tripping oer the</del>
+        </l>
+        <l>Than the light Music of her nimble toes</l>
+        <l><add place="margin">20</add>Patting against the Sorrel as she goes</l>
+        <l>
+          <del rend="strikethrough">How she will start and blush thus to be
+                        caught</del>
+          <del rend="strikethrough">
+            <add>that I should
+                        see</add>
+          </del>
+        </l>
+        <l>
+          <del rend="strikethrough">All</del>
+        </l>
+        <l>
+          <del rend="strikethrough">The wild a<gap extent="2" unit="chars" reason="illegible"/><supplied cert="low">er
+                        </supplied>flowing</del>
+        </l>
+        <l>How she will start and blush thus to be caught</l>
+        <l>
+          <del rend="strikethrough">Gladdening in the freedom</del>
+        </l>
+        <l>Playing in all her innocence of thought</l>
+        <l>O let me lead her gently o'er the Brook</l>
+        <l>With her half smiling lips and downward look</l>
+        <l>O let me for one moment touch her <add>Wrist</add>
+                    <del rend="strikethrough">hand</del></l>
+        <l>Let me one moment to her breathing list</l>
+        <l>And as she leaves me let her often turn</l>
+        <l>Her fair eyes peeping through her Locks auburn</l>
+      </lg>
+    </body>
+    <back/>
+  </text>
+</TEI>
