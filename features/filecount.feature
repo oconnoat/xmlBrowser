@@ -10,6 +10,11 @@ Feature: Count Files in the Directory that are XML
     When I open it and count the valid xml files
     Then I see the number 2
 
+    
+    Given I have the path /Users/oconnoat/Dropbox/Source/python/xmlBrowser/testData
+    When I open it and get the list of namespaces from all the trees
+    Then I see the text 'test'
+
     Scenario: iish directory
     Given I have the path /Users/oconnoat/Dropbox/Source/python/xmlBrowser/iish
     When I open it and count the files

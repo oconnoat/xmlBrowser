@@ -41,5 +41,10 @@ def load_xml_dir(dir_glob):
 #    dir_trees = [tree for tree in imap(get_tree, dir_glob)  if tree is not None]
     return dict(dir_trees)
 
+def get_namespace_list(dir_trees):
+    """For each tree, get the namespace statements, if any"""
+    return 'test'
+
+
 if __name__ == '__main__':
    load_xml_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/iish')
