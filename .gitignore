@@ -19,4 +19,5 @@ Session.vim
 __pycache__/
 *.py[cod]
 
+#large directory of data for testing
 iish/*
