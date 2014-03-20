@@ -47,8 +47,17 @@ def get_namespace_list(dir_trees):
     return str(nsURIs)
 
 def get_tag_list(dir_trees):
-    """For each tree, iterate and collect all the tag names TODO: Decide on whether Qname, Localname or full name"""
-    assert False, 'figure out how to walk the tree!'
-if __name__ == '__main__':
-  get_tag_list(load_xml_dir(open_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/testData')))
+    """For each tree, iterate and collect all the tag names. Returns full name"""
+    tags = set([tag.tag for url in dir_trees for tag in dir_trees[url].getroot().getiterator()])
+    return tags
 
+def xpath_query(dir_trees, urls, xpath):
+    """For a set of urls, run the xpath query and return the results in a dictionary, url as key, list of results"""
+    results = {url : dir_trees[url].findall(xpath) for url in urls}
+    return results
+
+if __name__ == '__main__':
+    path = '/Users/oconnoat/Dropbox/Source/python/xmlBrowser/testData/'
+    urls = ['/Users/oconnoat/Dropbox/Source/python/xmlBrowser/testData/test1.xml']
+    xpath = '/node[@value="1"]'
+    print etree.tostring(xpath_query(load_xml_dir(open_dir(path)), urls, xpath)[urls[0]][0])
