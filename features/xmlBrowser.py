@@ -46,6 +46,9 @@ def get_namespace_list(dir_trees):
     nsURIs = set([ns for url in dir_trees for ns in dir_trees[url].getroot().nsmap.values()])
     return str(nsURIs)
 
+def get_tag_list(dir_trees):
+    """For each tree, iterate and collect all the tag names TODO: Decide on whether Qname, Localname or full name"""
+    assert False, 'figure out how to walk the tree!'
 if __name__ == '__main__':
-  get_namespace_list(load_xml_dir(open_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/testData')))
+  get_tag_list(load_xml_dir(open_dir('/Users/oconnoat/Dropbox/Source/python/xmlBrowser/testData')))
 

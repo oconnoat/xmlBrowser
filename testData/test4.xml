@@ -1,0 +1,12 @@
+<?xml version="1.0" ?>
+<tei xmlns="http://www.tei-c.org/ns/1.0">
+    <node value="1" id="1">One</node>
+    <node value="2" id="2">Two</node>
+    <node value="2" id="3">Three</node>
+    <node value="3" id="4">Four</node>
+    <node value="3" id="5">Five</node>
+    <node value="3" id="6">
+        <node id="1">Six-one</node>
+        <node id="62">Six-two</node>
+    </node>
+</tei>
